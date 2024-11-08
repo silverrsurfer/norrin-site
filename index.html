@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norrin Ecrin- Blockchain Developer</title>
+    <title>Norrin Ecrin - Blockchain Developer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -14,7 +14,7 @@
         <aside class="sidebar">
             <div class="profile">
                 <div class="profile-image">
-                    <img src="/assets/logo.png" alt="Profile Image">
+                    <img src="/assets/logo.png" alt="logo Image">
                 </div>
                 <h1>Norrin Ecrin</h1>
                 <p class="title">Blockchain Developer</p>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
-                    <a href="https://github.com/silverrsurfer." target="_blank">github.com/silverrsurfer.</a>
+                    <a href="https://github.com/silverrsurfer." target="_blank">github.com/silverrsurfer</a>
                 </div>
             </div>
 
@@ -157,31 +157,6 @@
             </section>
         </main>
     </div>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

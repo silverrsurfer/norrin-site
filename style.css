@@ -75,6 +75,7 @@ body {
     font-weight: 500;
 }
 
+/* Contact Info */
 .contact-info {
     margin-bottom: 2rem;
 }
@@ -103,7 +104,7 @@ body {
 }
 
 /* Skills Section */
-.skills-section {
+.skills-section, .hobbies-section {
     margin-bottom: 2rem;
 }
 
@@ -143,6 +144,7 @@ body {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .skill-item:hover {
@@ -162,14 +164,6 @@ body {
     border-radius: 12px;
     padding: 2rem;
     box-shadow: var(--shadow);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: var(--transition);
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .section h2 {
@@ -193,6 +187,7 @@ body {
 /* Experience Timeline */
 .timeline {
     position: relative;
+    padding-left: 2rem;
 }
 
 .timeline::before {
@@ -206,7 +201,6 @@ body {
 }
 
 .experience-item {
-    padding-left: 2rem;
     position: relative;
     margin-bottom: 2rem;
 }
@@ -214,18 +208,21 @@ body {
 .experience-item::before {
     content: '';
     position: absolute;
-    left: -5px;
+    left: -2rem;
     top: 0;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background: var(--secondary-color);
+    transform: translateX(-5px);
 }
 
 .experience-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -346,6 +343,12 @@ body {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
 }
 
 /* Print Styles */
@@ -365,13 +368,12 @@ body {
         break-inside: avoid;
     }
 
-    .section {
-        opacity: 1;
-        transform: none;
-    }
-
     .project-card:hover {
         transform: none;
         box-shadow: none;
+    }
+
+    @page {
+        margin: 1.5cm;
     }
 }
